@@ -1,0 +1,260 @@
+/* ===================== VARIABLES ===================== */
+:root {
+  /* Core Colors */
+  --bg-main: #F6F3EE;
+  --text-dark: #2A2A2A;
+  --text-title: #3D405B;
+  --btn-primary: #E07A5F;
+  --btn-hover: #F2CC8F;
+  --border-light: #C4C4C4;
+
+  /* Spacing */
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --radius: 8px;
+
+  /* Fonts */
+  --font-title: 'Alice', serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    /* ===================== GLOBAL ===================== */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding-bottom: var(--space-lg);
+}
+
+/* ===================== HEADER / FOOTER ===================== */
+header {
+  background-color: var(--text-title);
+  color: var(--btn-hover);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+footer {
+  background-color: var(--text-title);
+  color: var(--btn-hover);
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+}
+
+/* ===================== CONTAINER ===================== */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* ===================== TITLES ===================== */
+h2 {
+  font-family: var(--font-title);
+  color: var(--text-title);
+  margin-bottom: var(--space-md);
+  font-size: 1.6rem;
+  justify-content: center;
+}
+
+/* ===================== LINKS & BUTTONS ===================== */
+a {
+  color: var(--btn-primary);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+a:hover {
+  color: var(--btn-hover);
+}
+
+.btn,
+button,
+input[type="submit"] {
+  background-color: var(--btn-primary);
+  color: var(--btn-hover);
+  border: 1px solid var(--btn-primary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--btn-hover);
+  color: var(--text-title);
+}
+
+/* Back Button */
+.btn-back {
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+/* ===================== LIST ===================== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Action Icons */
+.collection-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* ===================== FORMULARY ===================== */
+form {
+  background: white;
+  padding: var(--space-lg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  margin: auto;
+  /* Restrict width for large screens */
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+form input,
+form textarea,
+form select {
+  padding: var(--space-sm);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: var(--space-md);
+  }
+
+  form {
+    padding: var(--space-md);
+  }
+
+  ul li {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .collection-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* formulaire neauve */
+
+/* Estilo do container do formulário */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Alice', serif;
+}
+
+/* Estilo das labels */
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* Inputs e textareas */
+form input[type="text"],
+form select,
+form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0081A7;
+  box-shadow: 0 0 0 2px rgba(0, 129, 167, 0.2);
+  outline: none;
+}
+
+/* Botão */
+form input[type="submit"] {
+  background-color: #ff8e3c;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #f07167;
+}
+
+/* Mensagem de sucesso */
+form + p {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
